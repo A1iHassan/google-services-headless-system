@@ -28,7 +28,7 @@ app.post('/test', (req: Request, res: Response) => {
     res.status(200).json({ "your data": content })
 })
 
-app.get('/auth', (req: Request, res: Response) => {
+app.get('/ali/auth', (req: Request, res: Response) => {
     const url = OAuthClient.generateAuthUrl({
         access_type: 'offline',
         scope: scopes,
@@ -36,7 +36,7 @@ app.get('/auth', (req: Request, res: Response) => {
     res.redirect(url)
 })
 
-app.get('/authcallback', async (req: Request, res: Response) => {
+app.get('/ali/authcallback', async (req: Request, res: Response) => {
     const code = req.query.code as string;
 
     if (!code) res.status(400).json("Auth Faild");
