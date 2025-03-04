@@ -23,7 +23,7 @@ const scopes = [
 app.use(json())
 
 // Routes
-app.post('/test', (req: Request, res: Response) => {
+app.post('/ali/test', (req: Request, res: Response) => {
     const content = req.body;
     res.status(200).json({ "your data": content })
 })
