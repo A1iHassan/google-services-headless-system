@@ -33,6 +33,7 @@ app.get('/ali/auth', (req: Request, res: Response) => {
         access_type: 'offline',
         scope: scopes,
     })
+    console.log(url);
     res.redirect(url)
 })
 
