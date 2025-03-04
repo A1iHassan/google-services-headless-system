@@ -6,14 +6,19 @@
     "@types/bun": "latest",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
-    "@types/helmet": "^4.0.0"
+    "@types/helmet": "^4.0.0",
+    "drizzle-kit": "^0.30.5"
+  },
+  "scripts": {
+    "dev": "bun run --watch src/server.ts"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@libsql/client": "^0.14.0",
     "cors": "^2.8.5",
-    "drizzle": "^1.4.0",
+    "drizzle-orm": "^0.40.0",
     "express": "^4.21.2",
     "googleapis": "^146.0.0",
     "helmet": "^8.0.0"
