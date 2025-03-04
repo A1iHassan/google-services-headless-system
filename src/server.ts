@@ -3,9 +3,9 @@ import { google } from 'googleapis';
 
 // Environment Variables
 const port = Bun.env.PORT
-const clientId = Bun.env.CLIENT_ID
-const ClientSecret = Bun.env.CLIENT_SECRET
-const redirectURL = Bun.env.REDIRECT_URL
+const clientId = Bun.env.CLIENT_ID?.trim()
+const ClientSecret = Bun.env.CLIENT_SECRET?.trim()
+const redirectURL = Bun.env.REDIRECT_URL?.trim()
 
 // Assests
 const app = express();
